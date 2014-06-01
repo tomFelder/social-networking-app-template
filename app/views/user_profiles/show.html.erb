@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-warning">
+	<div class="panel-heading">
+		<p class="panel-title all-caps">
+			<%= @user_profile.name %>
+		</p>
+	</div>
+
+	<div class="panel-body"
+		<p>
+		  <strong>Name:</strong>
+		  <%= @user_profile.name %>
+		</p>
+		<p>
+		  <strong>Starsign:</strong>
+		  <%= @user_profile.starsign %>
+		</p>
+
+		<p>
+		  <strong>Age:</strong>
+		  <%= @user_profile.age %>
+		</p>
+
+		<p>
+		  <strong>Hobbies:</strong>
+		  <%= @user_profile.hobbies %>
+		</p>
+
+		<% if user_signed_in? %>
+			<% if @user_profile == current_user.user_profile %>
+			<%= link_to 'Edit', edit_user_profile_path(@user_profile), class: 'btn btn-info btn-warning' %> |
+			<!-- <%= link_to 'Back', user_profiles_path %> -->
+			<% end %>
+		<% end %>
+	</div>
+</div>

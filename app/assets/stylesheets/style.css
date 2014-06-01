@@ -1,4 +1,7 @@
-
+.all-caps {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
